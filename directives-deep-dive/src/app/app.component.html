@@ -16,7 +16,16 @@
           </li>
         </ul>
       </div>
-      <div *ngIf="!onlyOdd">
+      <!--<div *ngIf="!onlyOdd">-->
+        <!--<ul class="list-group">-->
+          <!--<li-->
+            <!--class="list-group-item"-->
+            <!--*ngFor="let even of evenNumbers"-->
+            <!--[ngClass]="{odd: even%2 !== 0}">{{even}}-->
+          <!--</li>-->
+        <!--</ul>-->
+      <!--</div>-->
+      <div *appUnless="onlyOdd">
         <ul class="list-group">
           <li
             class="list-group-item"
@@ -25,8 +34,18 @@
           </li>
         </ul>
       </div>
+
       <p appBasicHighlight>Styling paragraph with own Directive!</p>
       <p appBetterHighlight defaultColor="yellow" [highlightColor]="'coral'">A Better Highlight Directive!</p>
+
+      <div [ngSwitch]="value">
+        <p *ngSwitchCase="5">Value is 5</p>
+        <p *ngSwitchCase="10">Value is 10</p>
+        <p *ngSwitchCase="15">Value is 15</p>
+        <p *ngSwitchCase="100">Value is 100</p>
+        <p *ngSwitchDefault>Value is Default</p>
+
+      </div>
     </div>
   </div>
 </div>
