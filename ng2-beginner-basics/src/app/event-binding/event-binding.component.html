@@ -1,0 +1,16 @@
+<h2 class="text-warning">Ng2 Event Binding</h2>
+
+<section>
+  <input type="text" [value]="userInput" (input)="textChange($event.target.value)">
+
+  <p>User Input: {{userInput}}</p>
+</section>
+
+<section>
+  <div>
+    <b>Id: {{student.id}}</b> <br>
+    <input type="text" [value]="student.fname" (input)="student.fname=$event.target.value" placeholder="First Name"> <br>
+    <input type="text" [value]="student.lname" (input)="student.lname=$event.target.value" placeholder="Last Name"> <br>
+    <button class="btn btn-success" (click)="update()">Update</button>
+  </div>
+</section>

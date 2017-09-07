@@ -5,7 +5,14 @@
       <hr>
     </div>
     <div class="col-md-12">
-     
+     <app-property-binding></app-property-binding>
+
+      <app-switch></app-switch>
+
+      <app-event-binding (updateEmployee)="saveData($event)" [student]="studentObj"></app-event-binding>
+      <p>{{studentObj.fname + ' '+ studentObj.lname}} </p>
+
+      <p>{{fullName}}</p>
     </div>
   </div>
 </div>

@@ -1,0 +1,13 @@
+<h2 class="text-warning">Ng2 Switch Case</h2>
+
+<section>
+  <div *ngFor="let user of person;let i=index">
+    <div [ngSwitch]="user[i]">
+      <div *ngSwitchCase="user[0]">Wow John</div>
+      <div *ngSwitchCase="user[1]">Hello Smith</div>
+      <div *ngSwitchCase="user[2]">Hola Marry</div>
+      <div *ngSwitchDefault>Nothing</div>
+    </div>
+  </div>
+</section>
+<hr>

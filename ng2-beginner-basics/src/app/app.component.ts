@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Student} from "./shared/student.model";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  fullName = '';
+  studentObj = new Student(100, 'John', 'Doe');
+  saveData(emp) {
+    this.fullName = emp.fname + ' ' + emp.lname ;
+  }
+
 }

@@ -1,0 +1,9 @@
+<h3 class="text-warning">1. Ng2 Property Binding</h3>
+<br>
+<section class="user-detail">
+  <img [src]="user.imgurl" alt="{{user.name}}" >
+  <p [ngClass]="'text-bold'">{{user.name}}</p>
+  <p>{{user.address}}</p>
+  <p bind-textContent = "user.profession"></p>
+</section>
+<hr>
